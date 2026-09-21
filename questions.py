@@ -21,13 +21,28 @@ Swap them for your own if you like. Keep five of them either way: criterion 3
 names a target of "4 of 5", and four of three is not a thing.
 """
 
+
 QUESTIONS = [
-    # {"question": "...", "expects": "..."},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
+    {
+        "question": "What is the peak-hour wait time at Pellew Dining Hall?",
+        "expects": "12 to 18 minutes"
+    },
+    {
+        "question": "What time does Halden Hall close?",
+        "expects": "7:00pm"
+    },
+    {
+        "question": "How much does Halden Hall cost if paying with cash?",
+        "expects": "$10.00"
+    },
+    {
+        "question": "What time should students visit Halden Hall to avoid the lunchtime rush?",
+        "expects": "11:45"
+    },
+    {
+        "question": "Where is Pellew Dining Hall located?",
+        "expects": "athletics centre"
+    },
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.

@@ -25,6 +25,8 @@ contains the answer.
 **Why this target:**
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." -->
+     My campus_life corpus contains short documents with specific information about dining halls, including prices, operating hours, and wait times. I chose 4 out of 5 because I expect the system to retrieve the correct information for most questions, but some questions may be harder if the relevant information is spread across multiple documents.
+
 
 ---
 
@@ -35,6 +37,8 @@ Every answer the system produces names at least one source document.
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
+     My application is designed to answer questions using information from student documents. Every answer should include a source so users can verify the information instead of relying on an unsupported AI-generated response. I chose 100% because the system already retrieves source filenames alongside the document chunks.
+
 
 ---
 
@@ -52,6 +56,8 @@ in at least 4 of 5 tries.
 **Why this target:**
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
+     My corpus contains information about university life, not general knowledge. The system should refuse unrelated questions rather than generate answers using information outside the documents. I chose 4 out of 5 because some unrelated questions may still retrieve chunks with similar wording, making them harder for the relevance gate to reject.
+
 
 ---
 
@@ -68,10 +74,12 @@ in at least 4 of 5 tries.
           sentence cut in half at either end."
        - "No chunk is shorter than 200 characters, since anything below that
           in my corpus turned out to be a heading with no content under it." -->
+ 
 
 
 
 **Why this target:**
+    The campus_life corpus contains 88 short documents, and the starter currently produces 88 chunks with an average length of 317 characters. Since these documents are relatively short, I want my chunking strategy to preserve complete thoughts instead of splitting important information across multiple chunks. I chose 4 out of 5 because some documents may contain multiple topics that are difficult to separate without losing context.
 
 
 
@@ -92,6 +100,7 @@ in at least 4 of 5 tries.
 **Why this target:**
 
 
+My test questions ask about specific facts, including dining hall prices, operating hours, wait times, and locations. An answer that cites a document but provides the wrong information is not useful to the student asking the question. I chose 4 out of 5 because I want the system to answer most questions accurately while allowing for occasional retrieval or generation errors.
 
 ---
 
