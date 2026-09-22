@@ -26,6 +26,7 @@
      this repo.
 
      Milestone 5. -->
+     The Unofficial Guide is a question-answering application that uses student-written documents from the campus_life corpus. It answers questions about university life, including dining halls, housing, courses, and administrative policies. The application retrieves relevant passages from the documents and uses them to generate answers with source citations. When the documents do not contain enough relevant information, it returns "I don't have enough information about that."
 
 ## Chunking Strategy
 
@@ -171,9 +172,10 @@ all five unrelated questions in these tests.
 
      Milestone 5. -->
 
-**1.**
+**1.** I asked ChatGPT to help me design a chunking strategy for my campus_life documents. It suggested paragraph-aware chunking with a 600-character target and zero overlap and provided a replacement for split_documents() in chunker.py. I used that approach, ran the index command, and checked five actual chunks. The result was 88 chunks from 88 documents, so the short posts stayed intact.
 
-**2.**
+**2.** I asked ChatGPT to help me interpret the retrieval distances from my ten test questions. It compared the five in-corpus distances (0.171–0.537) with the five out-of-scope distances (0.825–0.895) and suggested keeping the existing 0.6 relevance cutoff. I checked that all five in-corpus questions received the expected answers and all five out-of-scope questions were rejected, so I kept 0.6 rather than changing config.py.
+
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
