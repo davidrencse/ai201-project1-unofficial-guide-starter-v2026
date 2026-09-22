@@ -129,14 +129,18 @@ independently.
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:**What is the peak-hour wait time at Pellew Dining Hall?
 
 **Answer:**
 
-```
-```
+The peak-hour wait time at Pellew Dining Hall is 12 to 18 minutes
+(dining_pellew_dining_hall.txt and dining_pellew_dining_hall_followup.txt).
 
-**My relevance cutoff:**
+Sources retrieved: dining_halden_hall.txt, dining_halden_hall_followup.txt,
+dining_pellew_dining_hall.txt, dining_pellew_dining_hall_followup.txt,
+dining_the_ridgeway_cafe_followup.txt
+
+**My relevance cutoff:** 0.6  
 
 <!-- The number you set in config.py, and how you got there.
 
@@ -146,6 +150,11 @@ independently.
      here — the table below wants all ten rows.
 
      Milestone 4. -->
+     I tested five questions covered by my corpus and five questions outside
+its scope. The in-corpus distances ranged from 0.171 to 0.537, while
+the out-of-scope distances ranged from 0.825 to 0.895. I kept the cutoff
+at 0.6 because it accepted all five relevant questions and rejected
+all five unrelated questions in these tests.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
